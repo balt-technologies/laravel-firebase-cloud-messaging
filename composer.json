@@ -1,0 +1,58 @@
+{
+  "name": "balt-technologies/laravel-firebase-cloud-messaging",
+  "description": "Some helpful tools for using FCM in Laravel.",
+  "keywords": [
+    "balt-technologies",
+    "laravel",
+    "laravel-firebase-cloud-messaging"
+  ],
+  "homepage": "https://github.com/balt-technologies/laravel-firebase-cloud-messaging",
+  "license": "MIT",
+  "authors": [
+    {
+      "name": "Oliver Hanne",
+      "email": "oliver.hanne@balt.de",
+      "role": "Trainee"
+    }
+  ],
+  "require": {
+    "php": "^8.0",
+    "kreait/firebase-php": "^5.18"
+  },
+  "require-dev": {
+    "orchestra/testbench": "^6.0",
+    "phpunit/phpunit": "^9.3"
+  },
+  "autoload": {
+    "psr-4": {
+      "BaltTechnologies\\LaravelFirebaseCloudMessaging\\": "src",
+      "BaltTechnologies\\LaravelFirebaseCloudMessaging\\Database\\Factories\\": "database/factories"
+    }
+  },
+  "autoload-dev": {
+    "psr-4": {
+      "BaltTechnologies\\LaravelFirebaseCloudMessaging\\Tests\\": "tests"
+    }
+  },
+  "scripts": {
+    "test": "vendor/bin/phpunit",
+    "test-f": "vendor/bin/phpunit --filter",
+    "testbench": "vendor/bin/testbench package:test --parallel --no-coverage",
+    "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+  },
+  "config": {
+    "sort-packages": true
+  },
+  "extra": {
+    "laravel": {
+      "providers": [
+        "BaltTechnologies\\LaravelFirebaseCloudMessaging\\LaravelFirebaseCloudMessagingServiceProvider"
+      ],
+      "aliases": {
+        "LaravelFirebaseCloudMessaging": "BaltTechnologies\\LaravelFirebaseCloudMessaging\\LaravelFirebaseCloudMessagingFacade"
+      }
+    }
+  },
+  "minimum-stability": "dev",
+  "prefer-stable": true
+}
